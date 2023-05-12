@@ -30,3 +30,16 @@ var twoSum = function(nums, target) {
 
   return [];
 };
+
+// QUIZ 2
+
+// Palindrome number
+
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
+    const x_str = String(x);
+    return x_str === x_str.split('').reverse().join('');
+};
