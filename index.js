@@ -86,3 +86,29 @@ var romanToInt = function(s) {
 
   return result;
 };
+
+// QUIZ 4
+
+// Given a string s consisting of words and spaces, return the length of the last word in the string.
+
+// A word is a maximal 
+// substring
+//  consisting of non-space characters only.
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLastWord = function(s) {
+    // Trim leading and trailing spaces
+  const trimmed = s.trim();
+
+  // Find the index of the last space
+  const lastSpace = trimmed.lastIndexOf(' ');
+
+  // Extract the last word
+  const lastWord = trimmed.substring(lastSpace + 1);
+
+  // Return the length of the last word
+  return lastWord.length;
+};
