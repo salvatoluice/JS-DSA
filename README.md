@@ -1,1 +1,5 @@
-# Javascript Data Structures & Algorithms
+## Javascript Data Structures & Algorithms
+
+
+* Easy > Medium > Hard 
+* # Credit: leetcode
