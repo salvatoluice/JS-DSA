@@ -295,3 +295,33 @@ var merge = function(nums1, m, nums2, n) {
 // Quiz 11
 
 // Given the root of a binary tree, return the inorder traversal of its nodes' values.
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var inorderTraversal = function(root) {
+  const result = [];
+
+function traverse(node) {
+  if (node === null) {
+    return;
+  }
+
+  traverse(node.left); // Traverse left subtree
+  result.push(node.val); // Visit current node
+  traverse(node.right); // Traverse right subtree
+}
+
+traverse(root);
+
+return result;
+};
