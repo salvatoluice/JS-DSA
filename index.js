@@ -112,3 +112,38 @@ var lengthOfLastWord = function(s) {
   // Return the length of the last word
   return lastWord.length;
 };
+
+
+
+// QUIZ 5
+
+// You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+
+// Increment the large integer by one and return the resulting array of digits.
+
+/**
+ * @param {number[]} digits
+ * @return {number[]}
+ */
+var plusOne = function(digits) {
+  const length = digits.length;
+  let carry = 1;
+
+  for (let i = length - 1; i >= 0; i--) {
+    const sum = digits[i] + carry;
+
+    if (sum < 10) {
+      digits[i] = sum;
+      carry = 0;
+    } else {
+      digits[i] = sum % 10;
+      carry = 1;
+    }
+  }
+
+  if (carry === 1) {
+    digits.unshift(1);
+  }
+
+  return digits;
+};
