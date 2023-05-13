@@ -177,3 +177,21 @@ function addBinary(a, b) {
 // You must not use any built-in exponent function or operator.
 
 // For example, do not use pow(x, 0.5) in c++ or x ** 0.5 in python.
+
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var mySqrt = function(x) {
+  if (x === 0) {
+  return 0;
+}
+
+let prev, result = x;
+while (result !== prev) {
+  prev = result;
+  result = (x / result + result) / 2;
+}
+
+return Math.floor(result);
+};
